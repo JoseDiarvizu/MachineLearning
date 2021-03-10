@@ -414,7 +414,7 @@ def function(img):
  
     return img
 
-
+'''
 cam = cv2.VideoCapture(0)
 while True:
     val,img = cam.read()
@@ -423,9 +423,8 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-
 '''
-captura = cv2.VideoCapture('videoBilletes4.MOV')
+captura = cv2.VideoCapture('billsVideo.mp4')
 while (captura.isOpened()):
   ret, img = captura.read()
 
@@ -439,5 +438,5 @@ while (captura.isOpened()):
     break
 captura.release()
 cv2.destroyAllWindows()
-'''
+
 ######BILL RECOGNITION#########
