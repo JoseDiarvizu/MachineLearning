@@ -422,7 +422,6 @@ while True:
     cv2.imshow("Imagen", img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
 '''
 captura = cv2.VideoCapture('billsVideo.mp4')
 while (captura.isOpened()):
