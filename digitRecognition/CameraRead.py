@@ -111,4 +111,4 @@ while (captura.isOpened()):
 captura.release()
 cv2.destroyAllWindows()
 '''
-######BILL RECOGNITION#########
+######DIGIT RECOGNITION#########
