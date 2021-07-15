@@ -1,18 +1,14 @@
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from mpl_toolkits.mplot3d import Axes3D
+
 import numpy as np
 import pandas as pd
 import cv2
-from sklearn import svm
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix
 from sklearn.metrics import recall_score, precision_score, f1_score
 from sklearn.svm import SVC
 
-df = pd.read_csv('camera.csv',sep=",")
+df = pd.read_csv('/Users/arvizu/Downloads/UP/SEASON6/MachineLearning/Python/digitRecognition/camera.csv',sep=",")
 X = df.values[0:10000,1:]
 Y = df.values[:,0]
 
@@ -33,6 +29,11 @@ print('Número de predicciones correctas:', np.sum(ytest==ypred))
 print('macro-precision:',precision_score(ytest,ypred,average='macro'))
 print('macro-recall:',recall_score(ytest,ypred,average='macro'))
 print('macro-f1:',f1_score(ytest,ypred,average='macro'))
+###MODELO################
+
+
+
+######BILL RECOGNITION#########
 
 
 def function(img):
@@ -54,6 +55,7 @@ def function(img):
             #cv2.imwrite('CameraImages/img'+str(cont)+'.png',imgn)
             cont+=1
 
+            ##################OBTENER HISTOGRAMA##################
             img_hsv = cv2.cvtColor(imgn, cv2.COLOR_BGR2HSV)
 
             #print('img',img.shape)
@@ -135,3 +137,4 @@ while (captura.isOpened()):
 captura.release()
 cv2.destroyAllWindows()
 '''
+######BILL RECOGNITION#########
